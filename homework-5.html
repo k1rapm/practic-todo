@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .tdFunction {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        margin-top: 20px;
+      }
+
+      td {
+        width: 400px;
+        padding: 20px;
+      }
+      tr:hover {
+        background-color: rgba(219 234 254);
+        color: white;
+        height: 100px;
+        border-radius: 16px;
+      }
+      .ava {
+        border-radius: 50%;
+        width: 50px;
+      }
+      .b1:hover {
+        background-color: rgba(0, 0, 0, 0.623);
+        color: white;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-100">
+    <header class="px-[100px] py-[100px] flex justify-between">
+      <div>
+
+        <button class="add bg-white rounded-md b1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            color="rgb(219 234 254)"
+            fill="currentColor"
+            class="bi bi-plus-lg"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+            />
+          </svg>
+        </button>
+      </div>
+      <div>
+
+        <input
+          id="search"
+          type="search"
+          class="w-[400px] h-[50px] border border-blue-100 rounded-2xl px-8 text-gray-300 bg-white"
+        />
+      </div>
+    </header>
+    <table class="box m-auto w-[90%] px-[50px] rounded-2xl bg-white"></table>
+    <dialog
+      class="adddialog shadow-xl shadow-black bg-transparent m-auto rounded-2xl"
+      style="backdrop-filter: blur(20px)"
+    >
+      <div class="flex justify-between px-[50px] py-[30px]">
+        <p class="text-2xl text-black pr-[500px]">ADD</p>
+
+        <button id="noneadd">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            color="white"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_4_826)">
+              <path
+                d="M27.4496 8.56532C26.8646 7.98032 25.9196 7.98032 25.3346 8.56532L17.9996 15.8853L10.6646 8.55032C10.0796 7.96532 9.13459 7.96532 8.54959 8.55032C7.96459 9.13532 7.96459 10.0803 8.54959 10.6653L15.8846 18.0003L8.54959 25.3353C7.96459 25.9203 7.96459 26.8653 8.54959 27.4503C9.13459 28.0353 10.0796 28.0353 10.6646 27.4503L17.9996 20.1153L25.3346 27.4503C25.9196 28.0353 26.8646 28.0353 27.4496 27.4503C28.0346 26.8653 28.0346 25.9203 27.4496 25.3353L20.1146 18.0003L27.4496 10.6653C28.0196 10.0953 28.0196 9.13532 27.4496 8.56532Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_4_826">
+                <rect width="36" height="36" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+
+      <form class="addform px-[50px] py-[30px]">
+        <div class="flex">
+          <div>
+            <label
+              for="text7"
+              class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+              >Avatar</label
+            >
+            <input
+              type="text"
+              name="inp1"
+              class="input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+              id="text7"
+              placeholder="Src Avatar"
+            />
+          </div>
+          <div>
+            <label
+              for="text8"
+              class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="inp2"
+              class="2 input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+              id="text8"
+              placeholder="Write Name"
+            />
+          </div>
+        </div>
+        <label
+          for="text9"
+          class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+          >Age</label
+        >
+        <input
+          type="text"
+          name="inp3"
+          class="input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+          id="text9"
+          placeholder="Write Age"
+        />
+
+        <div class="flex w-[200px] justify-between">
+          <button
+            type="submit"
+            class="saveadd text-white text-[15px] font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] mb-8 rounded-xl uppercase leading-relaxed tracking-wide bg-green-500 px-[20px] py-[10px]"
+          >
+            Save
+          </button>
+          <button
+            class="noneadd border border-red-500 text-[15px] font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] px-6 text-red-500 mb-8 rounded-xl uppercase leading-relaxed tracking-wide"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog
+      class="editdialog shadow-xl shadow-black bg-transparent m-auto rounded-2xl"
+      style="backdrop-filter: blur(20px)"
+    >
+      <div class="flex justify-between px-[50px] py-[30px]">
+        <p class="text-2xl text-black pr-[500px]">ADD</p>
+
+        <button id="noneedit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            color="white"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_4_826)">
+              <path
+                d="M27.4496 8.56532C26.8646 7.98032 25.9196 7.98032 25.3346 8.56532L17.9996 15.8853L10.6646 8.55032C10.0796 7.96532 9.13459 7.96532 8.54959 8.55032C7.96459 9.13532 7.96459 10.0803 8.54959 10.6653L15.8846 18.0003L8.54959 25.3353C7.96459 25.9203 7.96459 26.8653 8.54959 27.4503C9.13459 28.0353 10.0796 28.0353 10.6646 27.4503L17.9996 20.1153L25.3346 27.4503C25.9196 28.0353 26.8646 28.0353 27.4496 27.4503C28.0346 26.8653 28.0346 25.9203 27.4496 25.3353L20.1146 18.0003L27.4496 10.6653C28.0196 10.0953 28.0196 9.13532 27.4496 8.56532Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_4_826">
+                <rect width="36" height="36" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+
+      <form class="editform px-[50px] py-[30px]">
+        <div class="flex">
+          <div>
+            <label
+              for="text7"
+              class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+              >Avatar</label
+            >
+            <input
+              type="text"
+              name="inp4"
+              class="input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+              id="text7"
+              placeholder="Src Avatar"
+            />
+          </div>
+          <div>
+            <label
+              for="text8"
+              class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="inp5"
+              class="2 input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+              id="text8"
+              placeholder="Write Name"
+            />
+          </div>
+        </div>
+        <label
+          for="text9"
+          class="text-black text-base font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] leading-normal block mb-4"
+          >Age</label
+        >
+        <input
+          type="text"
+          name="inp6"
+          class="input block border mb-20 border-gray-500 p-2 rounded-lg w-[80%]"
+          id="text9"
+          placeholder="Write Age"
+        />
+
+        <div class="flex w-[200px] justify-between">
+          <button
+            type="submit"
+            class="saveedit text-white text-[15px] font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] mb-8 rounded-xl uppercase leading-relaxed tracking-wide bg-green-500 px-[20px] py-[10px]"
+          >
+            Save
+          </button>
+          <button
+            class="noneedit border border-red-500 text-[15px] font-medium font-['Segoe UI, Tahoma, Geneva, Verdana, sans-serif'] px-6 text-red-500 mb-8 rounded-xl uppercase leading-relaxed tracking-wide"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <script src="./homewotk-5.js"></script>
+  </body>
+</html>
